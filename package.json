@@ -1,0 +1,42 @@
+{
+  "name": "oxipng-node",
+  "version": "0.0.5",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "lint": "eslint ./src",
+    "typecheck": "tsc --noEmit",
+    "release": "semantic-release",
+    "prettier": "prettier --write \"src/**/*.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saionaro/oxipng-node.git"
+  },
+  "keywords": [
+    "png",
+    "compress",
+    "optimize",
+    "oxipng"
+  ],
+  "author": "Saionaro <shibakow@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Saionaro/oxipng-node/issues"
+  },
+  "homepage": "https://github.com/Saionaro/oxipng-node#readme",
+  "devDependencies": {
+    "@arkweid/lefthook": "^0.7.2",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@semantic-release/git": "^9.0.0",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.1.0",
+    "prettier": "^2.2.1",
+    "semantic-release": "^17.4.2",
+    "typescript": "^4.2.4"
+  }
+}

@@ -1,0 +1,18 @@
+commit-msg:
+  commands:
+    lint:
+      run: ./node_modules/.bin/commitlint -e .git/COMMIT_EDITMSG
+
+pre-commit:
+  commands:
+    typecheck:
+      glob: "*.ts"
+      run: npm run typecheck
+
+    linter:
+      glob: "*.ts"
+      run: npm run lint {staged_files} --fix && git add {staged_files}
+
+    prettier:
+      glob: "*.ts"
+      run: node_modules/.bin/prettier {staged_files} --write && git add {staged_files}
