@@ -17,11 +17,11 @@ jobs:
         with:
           node-version: "14"
 
-      - name: Install cross-env
-        run: npm i cross-env
+      - name: Enable postinstall
+        run: echo "SKIP_INIT=1" >> $GITHUB_ENV
 
       - name: Install deps
-        run: cross-env SKIP_INIT=1 npm ci
+        run: npm ci
 
       - name: Run linters
         run: npm run lint
