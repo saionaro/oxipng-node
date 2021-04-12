@@ -23,7 +23,7 @@ const bin = new BinWrapper()
   .use(process.platform === "win32" ? "oxipng.exe" : "oxipng")
   .version(`>=${OXIPNG_VERSION}`);
 
-interface Options {
+export interface Options {
   version?: boolean;
   path?: string;
   out?: string;

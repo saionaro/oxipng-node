@@ -1,7 +1,7 @@
 {
   "name": "oxipng-node",
   "version": "1.0.0",
-  "description": "",
+  "description": "Nodejs wrapper for multithreaded PNG optimizer written in Rust",
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
