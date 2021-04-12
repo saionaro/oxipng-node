@@ -24,10 +24,11 @@ const bin = new BinWrapper()
   .version(`>=${OXIPNG_VERSION}`);
 
 interface Options {
+  version?: boolean;
   path?: string;
   out?: string;
   alpha?: boolean;
-  compression?: 1 | 2 | 3 | 4 | 5 | 6;
+  optimization?: 1 | 2 | 3 | 4 | 5 | 6;
   interlacing?: boolean;
   strip?: "safe" | "all";
 }
@@ -35,13 +36,13 @@ interface Options {
 function transformOptions(params: Options): string[] {
   const args = [];
 
-  if (params.compression) {
-    let compression = Number(params.compression);
-    compression = Number.isNaN(compression) ? 2 : compression;
-    compression = Math.max(params.compression, 1);
-    compression = Math.min(params.compression, 6);
+  if (params.optimization) {
+    let optimization = Number(params.optimization);
+    optimization = Number.isNaN(optimization) ? 2 : optimization;
+    optimization = Math.max(params.optimization, 1);
+    optimization = Math.min(params.optimization, 6);
 
-    args.push("-o", String(compression));
+    args.push("-o", String(optimization));
   }
 
   if (params.interlacing) {
@@ -58,6 +59,10 @@ function transformOptions(params: Options): string[] {
 
   if (params.alpha) {
     args.push("--alpha", String(Boolean(params.alpha)));
+  }
+
+  if (params.version) {
+    args.push("--version");
   }
 
   if (params.path) {

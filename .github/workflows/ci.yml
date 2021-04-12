@@ -17,9 +17,6 @@ jobs:
         with:
           node-version: "14"
 
-      - name: Enable postinstall
-        run: echo "SKIP_INIT=1" >> $GITHUB_ENV
-
       - name: Install deps
         run: npm ci
 
