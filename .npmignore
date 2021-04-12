@@ -6,6 +6,7 @@ lefthook.yml
 .github
 tsconfig.json
 
+vendor
 src
 tests
 types

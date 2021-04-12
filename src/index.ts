@@ -1,8 +1,9 @@
-import { join } from "path";
+import { resolve } from "path";
 import BinWrapper from "bin-wrapper";
 
 const OXIPNG_VERSION = "4.0.3";
 const BASE_URL = "https://github.com/shssoichiro/oxipng/releases/download";
+const VENDOR_DIR = resolve(__dirname, "..", "vendor");
 
 const bin = new BinWrapper()
   .src(
@@ -19,7 +20,7 @@ const bin = new BinWrapper()
     "win32",
     "x64"
   )
-  .dest(join("vendor"))
+  .dest(VENDOR_DIR)
   .use(process.platform === "win32" ? "oxipng.exe" : "oxipng")
   .version(`>=${OXIPNG_VERSION}`);
 
