@@ -105,3 +105,4 @@ dist
 
 yarn.lock
 vendor
+tests/fixtures/*.compressed.png

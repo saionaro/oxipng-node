@@ -4,8 +4,11 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "start": "tsc --watch",
+    "build": "tsc",
+    "dev": "tsc --watch",
     "lint": "eslint ./src",
+    "test": "jest",
+    "postinstall": "node ./dist/init.js",
     "typecheck": "tsc --noEmit",
     "release": "semantic-release",
     "prettier": "prettier --write \"src/**/*.ts\""
@@ -36,6 +39,7 @@
     "@typescript-eslint/parser": "^4.21.0",
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.1.0",
+    "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "semantic-release": "^17.4.2",
     "typescript": "^4.2.4"
