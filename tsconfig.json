@@ -1,9 +1,15 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "CommonJS",
+    "esModuleInterop": true,
     "target": "ES2020",
+    "moduleResolution": "node",
     "outDir": "dist",
     "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@vendor/*": ["vendor/*"]
+    }
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "types/*"]
 }
