@@ -17,8 +17,11 @@ jobs:
         with:
           node-version: "14"
 
+      - name: Install cross-env
+        run: npm i cross-env
+
       - name: Install deps
-        run: SKIP_INIT=1 npm ci
+        run: cross-env SKIP_INIT=1 npm ci
 
       - name: Run linters
         run: npm run lint
