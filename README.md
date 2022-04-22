@@ -20,7 +20,7 @@ const { run } = require("oxipng-node");
 async function optimizeCat() {
   try {
     await run({
-      input: "/Users/user/project/images/cat.png",
+      path: "/Users/user/project/images/cat.png",
       out: "/Users/user/project/images/optimized/cat.png",
       optimization: 2,
     });
